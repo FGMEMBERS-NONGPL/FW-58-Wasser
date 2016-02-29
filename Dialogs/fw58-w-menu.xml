@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+   
+  <default>
+    
+    <menu n="10">
+      <label>Focke-Wulf-58</label>
+      <enabled type="bool">true</enabled>
+       
+      <item>
+        <label>Options</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var options = gui.Dialog.new("sim/gui/dialogs/options/dialog", 
+            "Aircraft/FW-58-Wasser/Dialogs/options-dlg.xml");
+            options.open();
+          </script>
+        </binding>
+      </item>
+       
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+       
+      <item>
+        <label>Lights</label>
+        <binding>
+          <command>nasal</command>
+          <script>
+            var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", 
+            "Aircraft/FW-58-Wasser/Dialogs/lights-dlg.xml");
+            lights.open();
+          </script>
+        </binding>
+      </item>
+      
+      <!-- <item>
+        <label>Manual</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/manual/enabled</property>
+        </binding>
+      </item> -->
+      
+    </menu>
+    
+  </default>
+
+</PropertyList>
+

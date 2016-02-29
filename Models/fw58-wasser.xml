@@ -1,0 +1,647 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>fw58-w.ac</path>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/FW-58-Wasser/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
+  <animation>
+
+    <!-- Objets transparents -->
+    <object-name>nosedome</object-name>
+    <object-name>nosewindows</object-name>
+    <object-name>skywindows</object-name>
+    <object-name>windscreen</object-name>
+    <object-name>propblurD</object-name>
+    <object-name>vitres</object-name>
+    <object-name>L-propdisc</object-name>
+    <object-name>L-navlightlens</object-name>
+    <object-name>R-propdisc</object-name>
+    <object-name>L-navlightlens</object-name>
+    <object-name>tail-navlightlens</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>glass_shader.png</texture>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>L-propdisc</object-name>
+    <object-name>R-propdisc</object-name>
+  </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>fin</object-name>
+    <object-name>rudder</object-name>
+    <object-name>floats</object-name>
+    <object-name>pitots</object-name>
+    <object-name>tail-lightlenshouse</object-name>
+    <object-name>fuselage</object-name>
+    <object-name>float-struts</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>fuse-texture</texture-prop>
+    <texture>FW58Bfus.png</texture>
+ </animation>
+
+ <animation>
+    <type>material</type>   
+    <object-name>leftaileron</object-name>
+    <object-name>rightaileron</object-name>
+    <object-name>leftwing</object-name>
+    <object-name>rightwing</object-name>
+    <object-name>leftstab</object-name>
+    <object-name>rightstab</object-name>
+    <object-name>leftelev</object-name>
+    <object-name>rightelev</object-name>
+    <object-name>L-engnacelle</object-name>
+    <object-name>R-engnacelle</object-name>
+    <object-name>L-spinner</object-name>
+    <object-name>R-spinner</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>wing-texture</texture-prop>
+    <texture>FW58Bwings.png</texture>
+  </animation>
+
+    <!-- Pilot -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -1.26 </x-m>
+      <y-m>  -0.227 </y-m>
+      <z-m>  0.994 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Observer -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Pilot/observer.xml</path>
+    <offsets>
+      <x-m>  0.160 </x-m>
+      <y-m>  -0.201 </y-m>
+      <z-m>  1.06 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>     0 </pitch-deg>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -1.572 </x-m>
+      <y-m>  -0.244 </y-m>
+      <z-m>  1.176 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   -25 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+   <!-- Nav & Landing lights -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Lights/WhiteLight.xml</path>
+    <offsets>
+      <x-m> 8.689 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 2.901 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Lights/RedLight.xml</path>
+    <offsets>
+      <x-m> 0.440 </x-m>
+      <y-m> -9.924 </y-m>
+      <z-m> 0.677 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Lights/GreenLight.xml</path>
+    <offsets>
+      <x-m> 0.457 </x-m>
+      <y-m> 9.943 </y-m>
+      <z-m> 0.678 </z-m>
+    </offsets>
+  </model>
+
+      <!-- engine start -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.633 </x-m>
+      <y-m> -2.55 </y-m>
+      <z-m> -0.40 </z-m>
+    </offsets>
+  </model>
+
+    <model>
+    <path>Aircraft/FW-58-Wasser/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.66 </x-m>
+      <y-m>  2.55 </y-m>
+      <z-m> -0.40 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.633 </x-m>
+      <y-m> -1.472 </y-m>
+      <z-m> -0.40 </z-m>
+    </offsets>
+  </model>
+
+   <model>
+    <path>Aircraft/FW-58-Wasser/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.664 </x-m>
+      <y-m>  1.472 </y-m>
+      <z-m> -0.40 </z-m>
+    </offsets>
+  </model>
+
+      <!-- engine smoke -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Effects/exhaust/exhaustsmoke.xml</path>
+    <offsets>
+      <x-m> -0.97 </x-m>
+      <y-m> -2.0l2 </y-m>
+      <z-m> -0.4 </z-m>
+    </offsets>
+  </model>
+
+         <!-- engine smoke -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Effects/exhaust/exhaustsmoke.xml</path>
+    <offsets>
+      <x-m> -0.97 </x-m>
+      <y-m>  2.0l2 </y-m>
+      <z-m> -0.4 </z-m>
+    </offsets>
+  </model>
+
+      <!-- water wakes -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Effects/Wakes/wakeGA.xml</path>
+    <offsets>
+      <x-m> 0.21 </x-m>
+      <y-m> -2.067 </y-m>
+      <z-m> -2.67 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Effects/Wakes/waterGF.xml</path>
+    <offsets>
+      <x-m> 0.21 </x-m>
+      <y-m>  -2.067 </y-m>
+      <z-m> -2.67 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Effects/Wakes/wakeDA.xml</path>
+    <offsets>
+       <x-m> 0.21 </x-m>
+      <y-m>  2.067 </y-m>
+      <z-m> -2.67 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Effects/Wakes/waterDF.xml</path>
+    <offsets>
+       <x-m> 0.21 </x-m>
+      <y-m>  2.067 </y-m>
+      <z-m> -2.67 </z-m>
+    </offsets>
+  </model>
+
+
+  <!-- Left prop anim --> 
+
+  <animation>
+    <type>select</type>
+    <object-name>L-propdisc</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>800</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>leftprop</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+	<value>900</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <name>PropellerLeft</name>
+    <object-name>leftprop</object-name>
+    <object-name>L-spinner</object-name>
+    <object-name>L-propdisc</object-name>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>PropellerLeft</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <factor> 1 </factor>
+    <center>
+     <x-m> -2.990 </x-m>
+     <y-m>  -2.0078 </y-m>
+     <z-m> -0.09501 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+<!-- Right propeller anim --> 
+
+  <animation>
+    <type>select</type>
+    <object-name>R-propdisc</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value>800</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>rightprop</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[1]/rpm</property>
+	<value>900</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <name>PropellerRight</name>
+    <object-name>rightprop</object-name>
+    <object-name>R-spinner</object-name>
+    <object-name>R-propdisc</object-name>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>PropellerRight</object-name>
+    <property>engines/engine[1]/rpm</property>
+    <factor> 1 </factor>
+    <center>
+     <x-m> -2.990 </x-m>
+     <y-m>  2.0078 </y-m>
+     <z-m> -0.09501 </z-m>
+    </center>
+    <axis>
+      <x>  -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+ <!-- cockpit -->
+
+ 	<!-- control elevators -->
+	<animation>
+            <object-name>yoke</object-name>
+		<object-name>yokemast</object-name>
+		<property>controls/flight/elevator</property>
+		<type>translate</type>
+		<factor>0.075</factor>
+            <center>
+		   <x-m>-1.206</x-m>
+		   <y-m> -0.2361</y-m>
+		   <z-m> 0.537</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+  <!-- control ailerons -->
+
+	<animation>
+		<object-name>yoke</object-name>
+		<property>controls/flight/aileron</property>
+		<type>rotate</type>
+		<factor>45</factor>
+            <center>
+		 <x-m>-1.315</x-m>
+		 <y-m>-0.237</y-m>
+		 <z-m> 1.087</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+ <!-- rudderpedals -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>L-ruddpedal</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>20</factor>
+  <center>
+   <x-m> -1.643</x-m>
+   <y-m>-0.334</y-m>
+   <z-m> 0.625</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>R-ruddpedal</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>20</factor>
+  <center>
+   <x-m> -1.643</x-m>
+   <y-m>-0.156</y-m>
+   <z-m> 0.625</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <!-- throttle -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>eng0thrott</object-name>
+  <property>controls/engines/engine[0]/throttle</property>
+  <factor>44</factor>
+  <center>
+   <x-m> -1.393</x-m>
+   <y-m> -0.067</y-m>
+   <z-m>  0.905</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>eng1thrott</object-name>
+  <property>controls/engines/engine[1]/throttle</property>
+  <factor>44</factor>
+  <center>
+   <x-m> -1.393</x-m>
+   <y-m> -0.067</y-m>
+   <z-m>  0.905</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <!-- Flap Lever -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>flaplever</object-name>
+  <property>controls/flight/flaps</property>
+  <interpolation>
+    <entry><ind>  0</ind><dep>-25</dep></entry>
+    <entry><ind>0.5</ind><dep>  0</dep></entry>
+    <entry><ind>  1</ind><dep> 25</dep></entry>
+  </interpolation>   
+  <center>
+   <x-m> -1.017</x-m>
+   <y-m> -0.0354</y-m>
+   <z-m>  0.582</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>flaplever</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/flaps</property>
+      <step>0.25</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>0</wrap>
+    </binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/flaps</property>
+      <step>-0.25</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>0</wrap>
+    </binding>
+  </action>
+</animation>
+
+  <!-- elevators -->
+  <animation>
+    <type>rotate</type>
+    <object-name>leftelev</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> -19 </factor>
+    <axis>
+      <x1-m>  8.074 </x1-m>
+      <y1-m> -0.138 </y1-m>
+      <z1-m>  1.4301 </z1-m>
+      <x2-m> 7.738 </x2-m>
+      <y2-m> -2.767 </y2-m>
+      <z2-m>  1.4301 </z2-m>
+    </axis>
+  </animation>
+
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>rightelev</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 19 </factor>
+    <axis>
+      <x1-m>  8.074 </x1-m>
+      <y1-m>  0.138 </y1-m>
+      <z1-m>  1.4301 </z1-m>
+      <x2-m> 7.738 </x2-m>
+      <y2-m>  2.767 </y2-m>
+      <z2-m>  1.4301 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>rudder</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 25 </factor>
+    <center>
+     <x-m>  8.681 </x-m>
+     <y-m>  0.0 </y-m>
+     <z-m>  0.5919 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+
+
+  <!-- Animations des ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>leftaileron</object-name>
+    <property>/surface-positions/left-aileron-pos-norm</property>
+    <factor> -15 </factor>
+    <axis>
+      <x1-m>  1.115 </x1-m>
+      <y1-m> -5.919 </y1-m>
+      <z1-m>  0.2904 </z1-m>
+      <x2-m>  1.327 </x2-m>
+      <y2-m> -9.9612 </y2-m>
+      <z2-m>  0.6543 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rightaileron</object-name>
+    <property>/surface-positions/right-aileron-pos-norm</property>
+    <factor>  15 </factor>
+    <axis>
+      <x1-m>  1.115 </x1-m>
+      <y1-m>  5.919 </y1-m>
+      <z1-m>  0.2904 </z1-m>
+      <x2-m>  1.327 </x2-m>
+      <y2-m>  9.9612 </y2-m>
+      <z2-m>  0.6543 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Volets -->
+  <animation>
+    <type>rotate</type>
+    <object-name>leftflap</object-name>
+    <property>/surface-positions/flap-pos-norm</property>
+    <factor> 40 </factor>
+    <axis>
+      <x1-m>  1.121 </x1-m>
+      <y1-m> -5.899 </y1-m>
+      <z1-m>  0.2861 </z1-m>
+      <x2-m>  0.927 </x2-m>
+      <y2-m> -2.349 </y2-m>
+      <z2-m> -0.032 </z2-m>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rightflap</object-name>
+    <property>/surface-positions/flap-pos-norm</property>
+    <factor> -40 </factor>
+    <axis>
+      <x1-m>  1.121 </x1-m>
+      <y1-m>  5.899 </y1-m>
+      <z1-m>  0.2861 </z1-m>
+      <x2-m>  0.927 </x2-m>
+      <y2-m>  2.349 </y2-m>
+      <z2-m> -0.032 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Compression -->
+  <animation>
+    <type>translate</type>
+    <object-name>L-float</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>R-float</object-name>
+    <property>gear/gear[4]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

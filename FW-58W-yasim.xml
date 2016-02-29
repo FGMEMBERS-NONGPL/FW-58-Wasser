@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- FW-58-WasserWehie
+   
+     sources          : http://en.wikipedia.org/wiki/Focke-Wulf_Fw_58
+
+General characteristics
+
+    Crew: 4
+    Length: 14 m (45ft 11 in)
+    Wingspan: 21 m (68 ft 10 in)
+    Height: 4.3 m (14 ft 1 in)
+    Wing area: 47 m2 (506 ft2)
+    Empty weight: 1,900 kg (4,200 lb)
+    Loaded weight: 2,810 kg (6,200 lb)
+    Powerplant: 2 x Argus As 10 air-cooled inverted V8 piston engines, 180 kW (240 hp) each
+
+Performance
+
+    Maximum speed: 256 km/h (159 mph)
+    Range: 676 km (420 mi)
+    Wing loading: 59.8 kg/m2 (12.3 lb/ft2)
+-->
+
+<airplane mass="4220" version="YASIM_VERSION_CURRENT">
+
+  <!-- Approach configuration -->
+  <approach speed="48" aoa="8" fuel="0.28">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.12"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.25"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.12"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.25"/>
+    <control-setting axis="/controls/flight/flaps" value="0.5"/>
+  </approach>
+
+  <!-- Cruise configuration -->
+  <cruise speed="174" alt="5000" fuel="0.4">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.93"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.78"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.9"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.93"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="0.78"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.9"/>
+    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+  </cruise>
+
+  <cockpit x="0" y="0.0" z="0.0"/>
+
+<fuselage ax="4.503"  ay="0" az="0.493" bx="1.59" by="0" bz="0.829"
+        width="1.28" taper="0.29" midpoint="1.0"/>
+    <fuselage ax="1.59"  ay="0" az="0.829" bx="-3.04" by="0" bz="0.621"
+        width="1.38" taper="0.98" midpoint="0.25" cy="4.41" cx="3.1"/>
+    <fuselage ax="-3.04"  ay="0" az="0.37" bx="-8.724" by="0" bz="0.74"
+        width="1.38" taper="0.31" midpoint="0.0" cy="5.01" cx="2.83"/>
+
+   <!-- engine shapes -->
+ 
+  <fuselage ax="2.83" ay="2.03" az="-0.291" bx="-1.177" by="2.03" bz="-0.091" width="0.86" taper="0.25" midpoint="0.17"/>
+  <fuselage ax="2.83" ay="-2.03" az="-0.291" bx="-1.177" by="-2.03" bz="-0.091" width="0.86" taper="0.25" midpoint="0.17"/>
+
+<!-- floats -->
+  <fuselage ax="5.003" ay="2.089" az="-2.091" bx="-4.107" by="2.089" bz="-2.087" width="0.952" taper="0.25" midpoint="0.65"/>
+  <fuselage ax="5.003" ay="-2.089" az="-2.091" bx="-4.107" by="-2.089" bz="-2.087" width="0.952" taper="0.25" midpoint="0.65"/>
+
+  <wing x="0.105" y="2.039" z="-0.009" 
+        chord="3.165" 
+        length="7.76" 
+        taper="0.44"
+        sweep="7"
+        twist="-2.25"
+        dihedral="4"
+        incidence="1.25"
+        camber="0.040">
+        <stall aoa="24" width="1" peak="1.5"/>
+        <flap0 start="0.0" end="0.416" lift="1.40" drag="1.85"/>
+        <flap1 start="0.46" end="0.984" lift="1.26" drag="1.21"/>
+
+        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
+
+        <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
+        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+
+        <control-speed control="FLAP0" transition-time="6"/>
+  </wing>
+
+    <mstab x="0.105" y="0.629" z="-0.009" 
+        chord="3.165" 
+        length="0.906" 
+        taper="1.0"
+        sweep="0.0"
+        twist="0.0"
+        dihedral="0"
+        incidence="1.25"
+        camber="0.047">
+        <stall aoa="24" width="1" peak="1.5"/>
+   </mstab>
+
+  <hstab x="-7.58" y="0" z="1.34" 
+         chord="2.163" 
+         length="3.05"
+         sweep="0"
+         effectiveness="1.49"
+         camber="-0.002"
+         taper="0.47">
+         <stall aoa="16" width="4" peak="2.0"/>
+         <flap0 start="0.0" end="0.94" lift="1.7" drag="1.24"/>
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+  <vstab x="-8.480" y="0" z="0.619" 
+         chord="2.05"
+         length="2.25"
+         taper="0.58"
+         sweep="5">
+         <stall aoa="14" width="3" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.43" drag="1.22"/>
+
+         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+  </vstab>
+
+  <!-- Engines   source            : https://en.wikipedia.org/wiki/Argus_As_10
+
+General characteristics
+
+    Type: inverted V-8, air-cooled, 90 V8 piston engine
+    Bore: 120 mm (4.724 in)
+    Stroke: 140 mm (5.512 in)
+    Displacement: 12.667 l (772.99 cu in)
+    Dry weight: 213 kg (470 lb) dry
+
+Components
+
+    Valvetrain: Two valves per cylinder.
+    Fuel system: Two Sun carburetors adapted for aerobatics
+    Oil system: Dry sump, one pressure pump and two scavenge pumps
+    Cooling system: Air
+
+Performance
+
+    Power output: 240 PS (176.52 kW) at 2,000 rpm
+    Specific power: 14.8 kW/L (0.31 hp/in3)
+    Compression ratio: 5.9:1
+    Specific fuel consumption: 235 gr/(hp*h); 0.518 lb/(hp*h)
+    Oil consumption: 0.010 kg/kW/hr (0.0176 lb/hp/hr)
+    Power-to-weight ratio: 0.835 kW/kg (0.51 hp/lb)
+  -->
+
+  <propeller x="2.1" y="2.03" z="-0.237"
+             radius="1.35" 
+             mass="470"
+             moment="12"
+             blades="2"
+             cruise-alt="5000"
+             cruise-power="260"
+             cruise-speed="174"
+             cruise-rpm="2330"
+             fine-stop="0.25"
+             coarse-stop="1.9"
+             reduction="1.0"
+             min-rpm="800"
+             takeoff-power="275"
+             takeoff-rpm="2400"> 
+             <actionpt x="3.007" y="2.03" z="-0.095"/>
+             <control-input control="ADVANCE" axis="/controls/engines/engine[0]/propeller-pitch"/>
+             <piston-engine eng-power="275" 
+                            eng-rpm="2400"
+                            displacement="773"
+                            bore="4.724"
+                            stroke="5.512"
+				    min-thottle="0.022"
+                            compression-ratio="5.9"/> 
+             <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+    </propeller>
+
+   <propeller x="2.1" y="-2.03" z="-0.237"
+             radius="1.35" 
+             mass="470"
+             moment="12"
+             blades="2"
+             cruise-alt="5000"
+             cruise-power="260"
+             cruise-speed="174"
+             cruise-rpm="2330"
+             fine-stop="0.25"
+             coarse-stop="1.9"
+             reduction="1.0"
+             min-rpm="800"
+             takeoff-power="275"
+             takeoff-rpm="2400"> 
+             <actionpt x="3.007" y="-2.03" z="-0.095"/>
+             <control-input control="ADVANCE" axis="/controls/engines/engine[1]/propeller-pitch"/>
+             <piston-engine eng-power="275" 
+                            eng-rpm="2400"
+                            displacement="773"
+                            bore="4.724"
+                            stroke="5.512"
+				    min-thottle="0.022"
+                            compression-ratio="5.9"/> 
+             <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+             <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
+             <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
+             <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
+      </propeller>
+ 
+  <!-- Twin Floats -->
+  <!-- front 1/2 -->
+  <gear x="4.598" y="2.19" z="-2.4733"
+        compression="1.5" 
+        spring = "15" 
+        sfric = "0.85" 
+        dfric = "0.75" 
+        ignored-by-solver="0"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="1.15"
+        speed-planing="25" 
+        spring-factor-not-planing="0.25">
+  </gear>
+
+  <gear x="4.598" y="-2.19" z="-2.4733"
+        compression="1.5" 
+        spring = "15" 
+        sfric = "0.85"
+        dfric = "0.75" 
+        ignored-by-solver="0"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="1.15"
+        speed-planing="25" 
+        spring-factor-not-planing="0.25">
+  </gear>
+
+  <!-- mid 3/4 -->
+  <gear x="-0.206" y="2.19" z="-2.835" 
+        compression="1.2" 
+        spring = "15" 
+        sfric = "0.8" 
+        dfric = "0.7" 
+        ignored-by-solver="0"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="1.15"
+        speed-planing="15" 
+        spring-factor-not-planing="0.4">
+  </gear>
+
+  <gear x="-0.206" y="-2.19" z="-2.835"
+        compression="1.2" 
+        spring = "15" 
+        sfric = "0.8" 
+        dfric = "0.7" 
+        ignored-by-solver="0"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="1.15"
+        speed-planing="15" 
+        spring-factor-not-planing="0.4">
+  </gear>
+ 
+  <!-- rear 5/6 -->
+  <gear x="-3.69" y="2.19" z="-2.395" 
+        compression="1.8" 
+        spring = "8" 
+        sfric = "0.9" 
+        dfric = "0.8" 
+        ignored-by-solver="1"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="0.9"
+        speed-planing="25" 
+        spring-factor-not-planing="0.85">
+  </gear>
+
+  <gear x="-3.69" y="-2.19" z="-2.395"
+        compression="1.8" 
+        spring = "8" 
+        sfric = "0.9" 
+        dfric = "0.8" 
+        ignored-by-solver="1"
+        on-water="1" 
+        on-solid="1" 
+        reduce-friction-by-extension="0.9"
+        speed-planing="25" 
+        spring-factor-not-planing="0.85">
+  </gear>
+
+  <weight x=" 1.278" y="0.213" z=" 0.782" mass-prop="/sim/weight[0]/weight-lb"/>
+  <weight x=" -0.28" y="0.213" z=" 0.670" mass-prop="/sim/weight[1]/weight-lb"/> 
+  <weight x=" -0.195" y="0" z=" -0.120" mass-prop="/sim/weight[2]/weight-lb"/>  
+
+  <!-- Fuel -->
+  <tank x="0.15" y=" 1.72" z="-0.070" capacity="480"/>
+  <tank x="0.15" y="-1.72" z="-0.070" capacity="480"/>
+
+  <!-- Mass distribution -->
+  <ballast x="3.7" y="0" z="0.73" mass="500"/>
+
+</airplane>
+

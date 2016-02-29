@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+   
+  <name>options-dlg</name>
+  <layout>vbox</layout>
+   
+  <text>
+    <label>FW58-W Options</label>
+  </text>
+   
+  <hrule />
+   
+  <group>
+    <layout>vbox</layout> 
+     
+    <checkbox>
+      <label>Start Setup</label>
+      <property>controls/electric/battery-switch</property>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switcher/battery</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine[0]/mixture</property>
+        <value>1.0</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine[0]/magnetos</property>
+        <value>3</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine[1]/mixture</property>
+        <value>1.0</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine[1]/magnetos</property>
+        <value>3</value>
+      </binding>   
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/fuel/tank[0]/pump</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>consumables/fuel/tank[0]/selected</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/fuel/tank[1]/pump</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>consumables/fuel/tank[1]/selected</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>engines/engine/fuel-pump</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switcher/pump3</property>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine[0]/throttle</property>
+        <value>1</value>
+      </binding> 
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/engines/engine[1]/throttle</property>
+        <value>1</value>
+      </binding>       
+      <binding><text>push starter</text></binding>
+      <live>true</live>
+    </checkbox>
+
+  
+  <hrule />
+     
+  <group>
+    <layout>vbox</layout>
+     
+    <button>
+      <legend>Close</legend>
+      <default>true</default>
+      <key>Esc</key>
+      <padding>10</padding>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+    </button>
+  </group>
+     
+</PropertyList>

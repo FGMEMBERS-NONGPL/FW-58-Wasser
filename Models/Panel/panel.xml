@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/rpm/rpm1.xml</path>
+    <offsets>
+      <x-m>  0.059 </x-m>
+      <y-m>  0.205 </y-m>
+      <z-m>  -0.050 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/rpm/rpm2.xml</path>
+    <offsets>
+      <x-m>  0.059 </x-m>
+      <y-m> 0.285 </y-m>
+      <z-m>  -0.050 </z-m>
+    </offsets>
+  </model>
+
+    <!-- fuel -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/fuel/fuel1.xml</path>
+    <offsets>
+      <x-m>  0.059 </x-m>
+      <y-m>  0.205 </y-m>
+      <z-m>  0.040 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/fuel/fuel2.xml</path>
+    <offsets>
+      <x-m>  0.059 </x-m>
+      <y-m> 0.285 </y-m>
+      <z-m>  0.040 </z-m>
+    </offsets>
+  </model>
+
+    <!-- magnetoes -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/magneto/ignition-ger-1.xml</path>
+    <offsets>
+      <x-m>  0.023 </x-m>
+      <y-m>  0.225 </y-m>
+      <z-m>  -0.150 </z-m>
+      <pitch-deg> 29 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/magneto/ignition-ger-2.xml</path>
+    <offsets>
+      <x-m>  0.023 </x-m>
+      <y-m> 0.265 </y-m>
+      <z-m>  -0.150 </z-m>
+      <pitch-deg> 29 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.059 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.060 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> 0.059 </x-m>
+      <y-m> -0.075 </y-m>
+      <z-m> 0.045 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/airspeed/airspeed.xml</path>
+    <offsets>
+      <x-m>  0.059 </x-m>
+      <y-m> -0.100 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+  </model>
+
+    <!-- compass -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>  0.059 </x-m>
+      <y-m>  0.085 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+
+  <!-- TURN -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.059 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/FW-58-Wasser/Models/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.059 </x-m>
+      <y-m>  0.100 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

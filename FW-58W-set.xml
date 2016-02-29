@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <description>Focke-Wulf-58 floatplane</description>
+    <author>3D and fdm by LesterBoffo</author>
+    <flight-model>yasim</flight-model>
+    <aero>FW-58W-yasim</aero>
+     <fuel-fraction>0.9</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/FW-58-Wasser/fw-58splash.jpg</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/FW-58-Wasser/Sounds/fw58-wasser-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/FW-58-Wasser/Models/fw58-wasser.xml</path>
+      <livery>
+        <file type="string">Swiss</file>
+      </livery>
+    </model>
+
+    <menubar include="Dialogs/fw58-w-menu.xml"/>
+
+    <flaps>
+      <setting>0.00</setting> <!-- Cruise -->
+      <setting>0.25</setting> <!-- Quarter -->
+      <setting>0.50</setting> <!-- Half -->
+      <setting>0.75</setting> <!-- Three-Quarter -->
+      <setting>1.0</setting> <!-- Full -->
+    </flaps>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+      </generic>
+    </multiplay>
+
+      <help>
+      <title> Focke-Wulf 58 Wasser </title>
+      <line> This is a constant speed propeller unit with</line>	  
+      <line> flaps 25~50% grossweight official: 7000 lb! </line>
+      <line> Unofficial and with nice wind: 7500+! Be careful </line> 
+      <line>with your payload, otherwise you will go swim ;)</line> 
+      <line> _____________________________________</line>
+      <line>CabinDoor                             " d "</line>     
+      <line></line>
+      <line>   -Startup-   </line>
+      <line>1. Main Battery Switch on.  (Toggles)  " ! "</line>
+      <line>2. Magneto on~off (Mouse Clickable)                  " }{ "</line>
+      <line>3. Tank pumps on (by default, toggles)  " f "  </line>
+      <line>4. Starter switch (circuit only on with battery switch on)  "s"</line>
+      <line></line>
+      <line></line>
+      <line>     -Takeoff-   </line>
+      <line>1. Set flaps to first notch, (Clickable with LMB, CMB or Joystick #4~#6 buttons) </line>
+      <line>   Note:  Airplane is fairly underpowered for float operation, needs full power.   </line>
+      <line>2. Adjust mixture for best rpm at present altitude "m/M" </line>
+      <line>3.  Line up against wind, everytime! </line>
+      <line>4.  Hold about 25~35% up-elevator when water-speed reaches 30~35 knots  </line>
+      <line>    and hold until floats break free from water. </line>
+      <line>5.  Level aircraft at 25' AGL to allow airspeed to build,</line>
+      <line>   and raise flaps as airspeed passes 80 knots, best climb rate at 120 knots! </line>
+      <line> ___________________________________________________________</line>
+      <line>     -Landing-   </line>
+      <line>Pay attention to airspeed indicator as decending, </line>
+      <line> the FW-58 was considered a powered glider, </line>
+      <line> and demands that speed be reduced for landing. Use flaps sparingly. </line>
+      <line> When within 25' of AGL or AWL, add last stage of down flaps </line>
+      <line> and let settle onto the water with nose at 10~15 degrees up. </line>
+      <line> _____________________________________</line>
+    </help>
+
+
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>240</max-lb>
+      <min-lb>140</min-lb>
+    </weight>
+
+    <weight n="1">
+      <name>Pax</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>240</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+    <weight n="2">
+      <name>Baggage</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>1200</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+  </sim>
+
+  <input>
+    <keyboard include="Nasal/fw-58w-keyboard.xml"/>
+  </input>
+
+  <nasal>
+    <anchor>
+      <file>Aircraft/FW-58-Wasser/Nasal/anchor.nas</file>
+    </anchor>
+    <doors>
+      <file>Aircraft/FW-58-Wasser/Nasal/doors.nas</file>
+    </doors>
+    <electrical>
+      <file>Aircraft/FW-58-Wasser/Nasal/Electrical.nas</file>
+    </electrical>
+    <liveries>
+      <file>Aircraft/FW-58-Wasser/Nasal/liveries.nas</file>
+    </liveries>
+    <lights>
+      <file>Aircraft/FW-58-Wasser/Nasal/light.nas</file>
+    </lights>
+  </nasal>
+
+</PropertyList>
+
